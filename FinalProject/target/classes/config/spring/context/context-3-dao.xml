@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<!-- new DeptDao(sqlSession) 객체가 생성되면서 초기화 -->
+	
+	<context:annotation-config />
+	
+	<bean id="cafe_dao" class="dao.CafeDao" autowire="default" />
+	
+	<bean id="hit_dao" class="dao.HitDao" autowire="default" />
+	
+	<bean id="member_dao" class="dao.MemberDao" autowire="default" />
+	
+	<bean id="review_dao" class="dao.ReviewDao" autowire="default" />
+</beans>
